@@ -16,6 +16,28 @@
     "noImplicitAny": false,
     "strictBindCallApply": false,
     "forceConsistentCasingInFileNames": false,
-    "noFallthroughCasesInSwitch": false
-  }
+    "noFallthroughCasesInSwitch": false,
+    /* ts 모듈 경로 설정 + tsconfig-paths/register를 사용하여 실행 */
+    "paths": {
+      "@shared/*": ["src/shared/*"],
+      "@config": ["src/config"],
+      "@server": ["src/Server"],
+      "@routes/*": ["src/routes/*"],
+      "@middleware/*": ["src/middleware/*"],
+      "@db/*": ["src/db/*"],
+      "@auth/*": ["src/auth/*"],
+      "@user/*": ["src/user/*"],
+      "@bus/*": ["src/bus/*"],
+      "@metro/*": ["src/metro/*"],
+      "@station/*": ["src/station/*"],
+      "@bmGroup/*": ["src/bm-group/*"],
+      "@bookMark/*": ["src/book-mark/*"],
+      "@bmGroupBookMark/*": ["src/bmgroup-bookmark/*"],
+      "@src/*": ["src/*"]
+    }
+  },
+  // 컴파일 포함
+  //"include": [],
+  // 컴파일 제외
+  "exclude": ["/spec/"]
 }
