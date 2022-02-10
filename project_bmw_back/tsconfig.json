@@ -6,6 +6,7 @@
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true, // TODO: Nest기본 세팅에서 추가함  (**참고: https://typescript-kr.github.io/pages/compiler-options.html)
     "target": "es2017",
     "sourceMap": true,
     "outDir": "./dist",
@@ -20,7 +21,7 @@
     /* ts 모듈 경로 설정 + tsconfig-paths/register를 사용하여 실행 */
     "paths": {
       "@shared/*": ["src/shared/*"],
-      "@config": ["src/config"],
+      "@config/*": ["src/config/*"],
       "@server": ["src/Server"],
       "@routes/*": ["src/routes/*"],
       "@middleware/*": ["src/middleware/*"],
