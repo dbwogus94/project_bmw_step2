@@ -1,0 +1,15 @@
+# api server + client 
+node_modules/
+*.env*
+/logs/*
+*/dist/*
+
+#
+*_copy*.yml
+
+# redis
+redis.conf
+
+# nginx
+nginx/ssl/
+certbot/
