@@ -14,8 +14,10 @@ async function bootstrap() {
 
   app.enableCors();
   app.use(helmet());
+
   const config: ConfigService = app.get(ConfigService);
-  const server: ServerConfig = config.get('server');
-  await app.listen(server.port);
+  const server: ServerConfig | undefined = config.get('server');
+  const port: number = server ? server.port : 8080;
+  await app.listen(port);
 }
 bootstrap();

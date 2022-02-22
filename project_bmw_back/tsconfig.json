@@ -13,14 +13,15 @@
     "baseUrl": "./",
     "incremental": true,
     "skipLibCheck": true,
-    "strictNullChecks": false,
+    "strictNullChecks": true, // TODO: Nest기본 세팅에서 변경 - null, undefined 엄격하게 체크하게 변경
     "noImplicitAny": false,
     "strictBindCallApply": false,
     "forceConsistentCasingInFileNames": false,
     "noFallthroughCasesInSwitch": false,
+    "strict": true, // Nest기본 세팅에서 추가함 -  TODO: 엄격하게 검사하도록 추가,
     /* ts 모듈 경로 설정 + tsconfig-paths/register를 사용하여 실행 */
     "paths": {
-      "@shared/*": ["src/shared/*"],
+      "@common/*": ["src/common/*"],
       "@config/*": ["src/config/*"],
       "@server": ["src/Server"],
       "@routes/*": ["src/routes/*"],
